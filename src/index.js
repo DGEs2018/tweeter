@@ -6,6 +6,17 @@ import NameWithHandle from './components/NameWithHandle';
 import './index.css';
 
 function Tweet() {
+    const testTweet = () => {
+        message: "I'm trying this for testing my Tweeter page",
+        gravatar: "abc",
+        author: {
+            handle: "mermaid",
+            name: "IAMA Cat Person"
+        },
+        likes: 10, 
+        retweets: 0,
+        teststamp: "2019-09-11 11:42:45"
+    };
 	return (
 		<div className="tweet">
 			Tweet
@@ -13,6 +24,12 @@ function Tweet() {
 			<div className="content">
 				<Message />
 				<NameWithHandle />
+			</div>
+			<div className="buttons">
+				<ReplyButton />
+				<RetweetButton />
+				<LikeButton />
+				<MoreOptionsButton />
 			</div>
 		</div>
 	);
